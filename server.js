@@ -3,7 +3,10 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const bodyPar = require('body-parser');
 app.use(express.static('public'))
+app.use(bodyPar.urlencoded({extended: true}));
+app.use(bodyPar.json());
 
 
 // port and listining 
